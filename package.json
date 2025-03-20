@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "strat": "node server.js"
+    "start": "node server.js"
+
   },
   "author": "Vihanga Anjali Chamodya Sathyani Shanilka",
   "license": "ISC",
