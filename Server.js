@@ -11,6 +11,14 @@ const PORT = process.env.PORT || 8070;
 app.use(cors());
 app.use(bodyParser.json());
 
+//Import routes
+const OrderRoutes = require('./routes/OrderRoute');
+
+//Use routes
+app.use(express.json());
+app.use('/orders', OrderRoutes);
+
+
 const url = process.env.MONGODB_URL;
 
 mongoose.connect(url, {
