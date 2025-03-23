@@ -13,10 +13,11 @@ app.use(bodyParser.json());
 
 //Import routes
 const OrderRoutes = require('./routes/OrderRoute');
-
+const ContactusRoute= require('./routes/ContactusRoute');
 //Use routes
 app.use(express.json());
 app.use('/orders', OrderRoutes);
+app.use('/contact', ContactusRoute);
 
 
 const url = process.env.MONGODB_URL;
