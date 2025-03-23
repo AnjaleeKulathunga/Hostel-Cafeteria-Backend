@@ -11,6 +11,13 @@ const PORT = process.env.PORT || 8070;
 app.use(cors());
 app.use(bodyParser.json());
 
+//import
+const FeedbackRoute = require('./routes/FeedbackRoute');
+
+//use roytes
+app.use(express.json());
+app.use("/feedback",FeedbackRoute);
+
 const url = process.env.MONGODB_URL;
 
 mongoose.connect(url, {
